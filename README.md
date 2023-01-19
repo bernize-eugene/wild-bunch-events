@@ -8,4 +8,5 @@ verified user account. Mapping to events triggers a call to Google Maps
 JavaScript API to display the route to the event address.
 
 <ins> Technologies Used </ins>
+<br />
 Python, Flask, JavaScript, HTML, CSS, Bootstrap, PostgreSQL, SQLAlchemy
