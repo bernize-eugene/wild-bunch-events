@@ -1,0 +1,57 @@
+[
+    {
+        "name" : "Music Concert",
+        "startDatetime": "",
+        "endDatetime": "",
+        "description": "This is a music event.",
+        "category": "Music",
+        "eventUrl": "",
+        "city":"City",
+        "region": "Region",
+        "country":"Country"
+    },
+    {
+        "name" : "House Party",
+        "startDatetime": "",
+        "endDatetime": "",
+        "description": "This is a party event.",
+        "category": "Party",
+        "eventUrl": "",
+        "city":"City",
+        "region": "Region",
+        "country":"Country"
+    },
+    {
+        "name" : "Arts + Crafts",
+        "startDatetime": "",
+        "endDatetime": "",
+        "description": "This is a arts event.",
+        "category": "Arts",
+        "eventUrl": "",
+        "city":"City",
+        "region": "Region",
+        "country":"Country"
+    },
+    {
+        "name" : "Clean Up",
+        "startDatetime": "",
+        "endDatetime": "",
+        "description": "This is a clean up event.",
+        "category": "Community",
+        "eventUrl": "",
+        "city":"City",
+        "region": "Region",
+        "country":"Country"
+    },
+    {
+        "name" : "Tour",
+        "startDatetime": "",
+        "endDatetime": "",
+        "description": "This is a tour event.",
+        "category": "Exploration",
+        "eventUrl": "",
+        "city":"City",
+        "region": "Region",
+        "country":"Country"
+    }
+]

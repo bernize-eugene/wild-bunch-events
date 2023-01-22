@@ -1,0 +1,62 @@
+[
+    {
+            "firstName": "Kimberly",
+            "lastName": "Bryant",
+            "email": "kimberly@test.com",
+            "phone": "123-123-1234",
+            "username": "kimberly",
+            "profileUrl": "",
+            "password_hash": "password",
+            "city": "",
+            "region": "",
+            "country": ""
+    },
+    {
+        "firstName": "Reshma",
+        "lastName": "Saujani",
+        "email": "reshma@test.com",
+        "phone": "123-123-1234",
+        "username": "reshma",
+        "profileUrl": "",
+        "password_hash": "password",
+        "city": "",
+        "region": "",
+        "country": ""
+    },
+    {
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "email": "ada@test.com",
+        "phone": "123-123-1234",
+        "username": "ada",
+        "profileUrl": "",
+        "password_hash": "password",
+        "city": "",
+        "region": "",
+        "country": ""
+    },
+    {
+        "firstName": "Grace",
+        "lastName": "Hopper",
+        "email": "grace@test.com",
+        "phone": "123-123-1234",
+        "username": "grace",
+        "profileUrl": "",
+        "password_hash": "password",
+        "city": "",
+        "region": "",
+        "country": ""
+    },
+    {
+        "firstName": "Hedy",
+        "lastName": "Lamar",
+        "email": "hedy@test.com",
+        "phone": "123-123-1234",
+        "username": "hedy",
+        "profileUrl": "",
+        "password_hash": "password",
+        "city": "",
+        "region": "",
+        "country": ""
+    }
+]
