@@ -1,4 +1,4 @@
-from model import connect_to_db, db, db_drop_and_create_all
+from model import connect_to_db, db
 import os
 from jinja2 import StrictUndefined
 from flask import Flask, jsonify
@@ -16,6 +16,5 @@ if __name__ == "__main__":
     app.debug = True
     connect_to_db(app)
     CORS(app)
-    db_drop_and_create_all(app)
 
     app.run(host="0.0.0.0")
