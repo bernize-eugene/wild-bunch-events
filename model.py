@@ -66,7 +66,9 @@ class Event(db.Model):
     startDatetime = db.Column(db.DateTime(timezone=True))
     endDatetime = db.Column(db.DateTime(timezone=True))
     description = db.Column(db.Text)
+    category = db.Column(db.String)
     eventUrl =  db.Column(db.String)
+
 
     #
     city = db.Column(db.String)
@@ -75,11 +77,9 @@ class Event(db.Model):
 
     # Foreign Key
     userId = db.Column(db.Integer, db.ForeignKey('users.userId'))
-    typeId = db.Column(db.Integer, db.ForeignKey('types.typeId'))
 
     # Relationships
     user = db.relationship('User', foreign_keys=[userId])
-    eventType = db.relationship('EventType', foreign_keys=[typeId])
 
     def __repr__(self):
         return (
@@ -94,6 +94,7 @@ class Event(db.Model):
             "startDatetime": self.startDatetime,
             "endDatetime": self.endDatetime,
             "description" : self.description,
+            "category" : self.category,
             "eventUrl": self.eventUrl,
             "city": self.city,
             "region" : self.region,
@@ -102,32 +103,6 @@ class Event(db.Model):
             "user" : f'{self.user.firstName.title()} {self.user.lastName.title()}'
         }
 
-class EventType(db.Model):
-    """ Returns the type of event """
-
-    __tablename__ = "types"
-
-    # Primary Key
-    typeId = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    
-    #
-    typeName = db.Column(db.String)
-
-    # Foreign Key
-    eventId = db.Column(db.Integer, db.ForeignKey("events.eventId"))
-
-    # Relationships
-    event = db.relationship('Event', foreign_keys=[eventId])
-
-    def __repr__(self):
-        return f'<EventType event={self.eventId} typeName={self.typeName}>'
-    
-    def to_dict(self):
-        return {
-            "typeId" : self.typeId,
-            "typeName" : self.typeName,
-            "eventId" : self.eventId
-        }
 
 
 # -------------------------------------------------------------------------------------- #
