@@ -32,6 +32,9 @@ class User(db.Model):
     region = db.Column(db.String)
     country = db.Column(db.String)
 
+    # Relationships
+    events = db.relationship('Event', backref='users', viewonly=True)
+
     # Repr string
     def __repr__(self):
         return f'<User userId={self.userId} firstName={self.firstName.title()}, lastName={self.lastName.title()}, username={self.username}>'
@@ -70,8 +73,13 @@ class Event(db.Model):
     region = db.Column(db.String)
     country = db.Column(db.String)
 
-    #
+    # Foreign Key
     userId = db.Column(db.Integer, db.ForeignKey('users.userId'))
+    typeId = db.Column(db.Integer, db.ForeignKey('types.typeId'))
+
+    # Relationships
+    user = db.relationship('User', foreign_keys=[userId])
+    eventType = db.relationship('EventType', foreign_keys=[typeId])
 
     def __repr__(self):
         return (
@@ -94,7 +102,35 @@ class Event(db.Model):
             "user" : f'{self.user.firstName.title()} {self.user.lastName.title()}'
         }
 
+class EventType(db.Model):
+    """ Returns the type of event """
 
+    __tablename__ = "types"
+
+    # Primary Key
+    typeId = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    
+    #
+    typeName = db.Column(db.String)
+
+    # Foreign Key
+    eventId = db.Column(db.Integer, db.ForeignKey("events.eventId"))
+
+    # Relationships
+    event = db.relationship('Event', foreign_keys=[eventId])
+
+    def __repr__(self):
+        return f'<EventType event={self.eventId} typeName={self.typeName}>'
+    
+    def to_dict(self):
+        return {
+            "typeId" : self.typeId,
+            "typeName" : self.typeName,
+            "eventId" : self.eventId
+        }
+
+
+# -------------------------------------------------------------------------------------- #
 
 """ Database connection """
 # NOTE: connecting to "wild-bunch-events" database
