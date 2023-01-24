@@ -53,7 +53,7 @@ def get_user_by_id(userId):
     return User.query.get(userId)
 
 
-################# CONNECTION ############################
+################# CONNECTION #############################
 
 def connect_user_event(userId, eventId):
     """ Connect user to event and return event """
