@@ -6,8 +6,7 @@ import os
 
 db = SQLAlchemy()
 
-os.system("dropdb wild-bunch-events")
-os.system("createdb wild-bunch-events")
+
 
 class User(db.Model):
     """ A user """
