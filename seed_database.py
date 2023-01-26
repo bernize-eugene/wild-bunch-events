@@ -55,5 +55,36 @@ for user in userData:
 model.db.session.add_all(usersDb)
 model.db.session.commit()
 
+# load user data from JSON file and save as variable
+with open("data/events.json") as p:
+    eventData = json.loads(p.read())
 
+# create sample of users to store in a list
+eventsDb =[]
+
+for event in eventData:
+    name, startDatetime, endDatetime, description = (
+        event['name'],
+        event['startDatetime'],
+        event['endDatetime'],
+        event['description']
+    )
+
+    category, eventUrl  = (
+        event['category'],
+        event['eventUrl']
+    )
+
+    city, region, country = (
+        event['city'],
+        event['region'],
+        event['country']
+    )
+
+    eventDb = crud.create_event(
+        name, startDatetime, endDatetime, description,
+        category, eventUrl, city, region, country
+    )
+
+    eventsDb.append(eventDb)
 
