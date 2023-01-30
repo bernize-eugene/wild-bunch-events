@@ -8,6 +8,12 @@ app = Flask(__name__)
 app.secret_key = "SECRETSECRETSECRETSCETRE"
 app.jinja_env.undefined = StrictUndefined
 
+GM_KEY = os.environ["GOOGLE_MAPS_KEY"]
+CLOUD_KEY = os.environ["CLOUDINARY_KEY"]
+CLOUD_SECRET = os.environ["CLOUDINARY_SECRET"]
+CLOUD_NAME = os.environ["CLOUD_NAME"]
+
+
 @app.route('/', methods=['GET'])
 def display_homepage():
     return jsonify({"Hello": "World"})
