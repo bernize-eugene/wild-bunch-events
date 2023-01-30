@@ -4,7 +4,16 @@
 {% block head %} {{ super() }} {% endblock %}
 
 <!-- Nav -->
-
+{% block navbar %}
+<ul class="navbar-nav">
+  <li>
+    <a href="#">Home</a>
+  </li>
+  <li>
+    <a href="/login">Login</a>
+  </li>
+</ul>
+{% endblock %}
 <!-- Body -->
 {% block body %}
 <h1>Wildout at Wild Bunch Events!</h1>
