@@ -48,9 +48,14 @@ def get_event_by_id(eventId):
     return Event.query.get(event_id)
 
 def get_user_by_id(userId):
-    """ Return a user by id """
+    """ Return a user from database by id """
 
     return User.query.get(userId)
+
+def get_user_by_username(username):
+    """ Return a user from database by username"""
+
+    return User.quer.filter(User.username == username).first()
 
 
 ################# CONNECTION #############################
