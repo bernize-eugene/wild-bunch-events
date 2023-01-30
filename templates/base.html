@@ -15,6 +15,14 @@
     <!-- Navigation Block -->
     {% block navbar %} {% endblock %}
 
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages()%} {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li>{{message}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
     <!-- Body Block -->
     {% block body %} {% endblock %}
 
