@@ -55,7 +55,7 @@ def get_user_by_id(userId):
 def get_user_by_username(username):
     """ Return a user from database by username"""
 
-    return User.quer.filter(User.username == username).first()
+    return User.query.filter(User.username == username).first()
 
 
 ################# CONNECTION #############################
