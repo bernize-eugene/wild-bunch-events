@@ -19,11 +19,17 @@ def display_homepage():
     """ Display homepage """
     return render_template('index.html')
 
-@app.route('/login', methods=['GET', 'POST'])
-def process_login():
-    """ Display and process login """
+@app.route('/login', methods=['POST'])
+def display_login():
+    """ Display login """
+    
+
     return render_template('login.html')
 
+@app.route('/login', methods=['POST'])
+def process_login():
+    """ Process login """
+    pass
 
 
 # Connect to database 
