@@ -1,8 +1,8 @@
 [
     {
         "name" : "Music Concert",
-        "startDatetime": "",
-        "endDatetime": "",
+        "startDatetime": "2012-04-23T18:25:43.511Z",
+        "endDatetime": "2012-04-23T18:25:43.511Z",
         "description": "This is a music event.",
         "category": "Music",
         "eventUrl": "",
@@ -12,8 +12,8 @@
     },
     {
         "name" : "House Party",
-        "startDatetime": "",
-        "endDatetime": "",
+        "startDatetime": "2012-04-23T18:25:43.511Z",
+        "endDatetime": "2012-04-23T18:25:43.511Z",
         "description": "This is a party event.",
         "category": "Party",
         "eventUrl": "",
@@ -23,8 +23,8 @@
     },
     {
         "name" : "Arts + Crafts",
-        "startDatetime": "",
-        "endDatetime": "",
+        "startDatetime": "2012-04-23T18:25:43.511Z",
+        "endDatetime": "2012-04-23T18:25:43.511Z",
         "description": "This is a arts event.",
         "category": "Arts",
         "eventUrl": "",
@@ -34,8 +34,8 @@
     },
     {
         "name" : "Clean Up",
-        "startDatetime": "",
-        "endDatetime": "",
+        "startDatetime": "2012-04-23T18:25:43.511Z",
+        "endDatetime": "2012-04-23T18:25:43.511Z",
         "description": "This is a clean up event.",
         "category": "Community",
         "eventUrl": "",
@@ -45,8 +45,8 @@
     },
     {
         "name" : "Tour",
-        "startDatetime": "",
-        "endDatetime": "",
+        "startDatetime": "2012-04-23T18:25:43.511Z",
+        "endDatetime": "2012-04-23T18:25:43.511Z",
         "description": "This is a tour event.",
         "category": "Exploration",
         "eventUrl": "",
