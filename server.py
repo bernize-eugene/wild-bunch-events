@@ -19,10 +19,10 @@ def display_homepage():
     """ Display homepage """
     return render_template('index.html')
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET'])
 def display_login():
     """ Display login """
-    
+
 
     return render_template('login.html')
 
