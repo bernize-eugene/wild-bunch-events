@@ -51,9 +51,9 @@ for user in userData:
 
     usersDb.append(userDb)
 
-# add and commit all users to database
+# add and all users to database
 model.db.session.add_all(usersDb)
-model.db.session.commit()
+
 
 # load user data from JSON file and save as variable
 with open("data/events.json") as p:
@@ -62,6 +62,7 @@ with open("data/events.json") as p:
 # create sample of users to store in a list
 eventsDb =[]
 
+# create samples of events to store in a list
 for event in eventData:
     name, startDatetime, endDatetime, description = (
         event['name'],
@@ -88,3 +89,8 @@ for event in eventData:
 
     eventsDb.append(eventDb)
 
+# add and all events to database
+model.db.session.add_all(eventsDb)
+
+# commit user and events into database
+model.db.session.commit()
