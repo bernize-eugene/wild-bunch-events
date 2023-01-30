@@ -16,8 +16,17 @@ CLOUD_NAME = os.environ['CLOUD_NAME']
 
 @app.route('/', methods=['GET'])
 def display_homepage():
+    """ Display homepage """
     return render_template('index.html')
 
+@app.route('/login', methods=['GET', 'POST'])
+def process_login():
+    """ Display and process login """
+    return render_template('login.html')
+
+
+
+# Connect to database 
 if __name__ == "__main__":
     app.debug = True
     connect_to_db(app)
