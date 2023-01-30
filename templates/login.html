@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!-- Title Block -->
+{% block title %} Login {% endblock %}
+<!-- Head -->
+{% block head %} {{ super() }} {% endblock %}
+
+<!-- ------------------------- Nav ------------------------------->
+{% block navbar %}
+<ul class="navbar-nav">
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li>
+    <a href="#">Login</a>
+  </li>
+</ul>
+{% endblock %}
+<!-- ------------------------- Body ----------------------------->
+{% block body %}
+<h1>Login</h1>
+<p>[Content goes here]</p>
+
+{% endblock %}
