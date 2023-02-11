@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} User Dashboard {% endblock%}
+
+<!-- ------------------------- Nav ------------------------------->
+{% block navbar %}
+<ul class="navbar-nav">
+  <li>
+    <a href="#">Dashboard</a>
+  </li>
+  <li>
+    <a href="/logout">Logout</a>
+  </li>
+</ul>
+{% endblock %}
+
+<!-- ------------------------- Body ------------------------------>
+{% block body %}
+<h1>Welcome {{user.firstName}} {{user.lastName}}</h1>
+{% endblock %}
