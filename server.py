@@ -16,18 +16,18 @@ CLOUD_NAME = os.environ['CLOUD_NAME']
 
 
 @app.route('/', methods=['GET'])
-def display_homepage():
+def displayHomepage():
     """ Display homepage """
     return render_template('index.html')
 
 @app.route('/login', methods=['GET'])
-def display_login():
+def displayLogin():
     """ Display login """
     msg = ""
     return render_template('login.html', message=msg)
 
 @app.route('/login', methods=['POST'])
-def process_login():
+def processLogin():
     """ Process login """
 
     username = request.form.get("username")
@@ -43,7 +43,21 @@ def process_login():
         session['username'] = user.username
         session['userId'] = user.userId
 
-        return f"Welcome back, {user.username}"
+        return redirect(f"/users/{user.userId}")
+
+# Logout
+
+# User Dashboard
+@app.route("/users/<userId>")
+def showUser(userId):
+    """ Show details on a particular user """
+
+    user = crud.get_user_by_id(userId)
+
+    return render_template("userDetails.html", user=user)
+
+
+
 
 # Connect to database 
 if __name__ == "__main__":
