@@ -46,6 +46,12 @@ def processLogin():
         return redirect(f"/users/{user.userId}")
 
 # Logout
+@app.route("/logout")
+def logout():
+    """ Delete user session on logout """
+
+    session.pop('username', None)
+    return redirect('/')
 
 # User Dashboard
 @app.route("/users/<userId>")
