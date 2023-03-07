@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+<!-- Title -->
+{% block title %} Register an account {% endblock%}
+
+<!-- ------------------------- Nav ------------------------------->
+{% block navbar %}
+<ul class="navbar-nav">
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li>
+    <a href="/login">Login</a>
+  </li>
+  <li>
+    <a href="#">Sign Up</a>
+  </li>
+</ul>
+{% endblock %}
+
+<!--Body-->
+{% block body %}
+<div>
+  <h4>Create an account</h4>
+  <p>Please fill in with your details:</p>
+</div>
+<form
+  action="/register"
+  method="POST"
+  id="register"
+  enctype="multipart/form-data"
+>
+  <div>
+    <input
+      type="text"
+      id="firstName"
+      name="firstName"
+      placeholder="First Name"
+      required
+    />
+  </div>
+  <div>
+    <input
+      type="text"
+      id="lastName"
+      name="lastName"
+      placeholder="Last Name"
+      required
+    />
+  </div>
+  <div>
+    <input
+      type="file"
+      id="profileUrl"
+      name="profileUrl"
+      placeholder="Upload Profile Picture"
+    />
+  </div>
+  <div>
+    <input type="email" id="email" name="email" placeholder="Email" />
+  </div>
+  <div>
+    <input type="text" id="phone" name="phone" placeholder="Phone" />
+  </div>
+  <div>
+    <input type="text" id="userCity" name="userCity" placeholder="City" />
+  </div>
+  <div>
+    <input type="text" id="userRegion" name="userRegion" placeholder="Region" />
+  </div>
+  <div>
+    <input
+      type="text"
+      id="userCountry"
+      name="userCountry"
+      placeholder="Country"
+    />
+  </div>
+  <div>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      placeholder="Choose Username"
+      required
+    />
+  </div>
+  <div>
+    <input
+      type="text"
+      id="password"
+      name="password"
+      placeholder="Choose Password"
+      required
+    />
+  </div>
+  <div>
+    <button type="submit">Sign Up</button>
+  </div>
+  <div>
+    Already have an account?
+    <a href="/login">Login here</a>
+  </div>
+</form>
+{% endblock %}
